@@ -30,7 +30,7 @@ const HomePage = () => {
     useEffect(() => {
         dispatch(fetchAllTweetAction());
         dispatch(getCurrentUserAction());
-        socket.connect();
+        // socket.connect();
     }, []);
 
     const handleTweetInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
