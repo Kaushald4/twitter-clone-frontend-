@@ -72,11 +72,11 @@ const HomePage = () => {
     };
 
     const updateTweetLikes = (tweetId: string) => {
-        // dispatch(updateTweetLikesAction(tweetId));
-        socket.emit("tweet_like", tweetId);
-        socket.on("tweet_like", (updatedTweet: any) => {
-            dispatch(updateTweetLikesSuccess(updatedTweet));
-        });
+        dispatch(updateTweetLikesAction(tweetId));
+        // socket.emit("tweet_like", tweetId);
+        // socket.on("tweet_like", (updatedTweet: any) => {
+        //     dispatch(updateTweetLikesSuccess(updatedTweet));
+        // });
     };
 
     return (
