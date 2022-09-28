@@ -104,7 +104,9 @@ function* loginCheckSaga(action: any): any {
 
 const login = async (data: any) => {
     try {
-        const response: any = await axios.post("/login", JSON.stringify(data));
+        const response: any = await axios.post("/login", JSON.stringify(data), {
+            withCredentials: true,
+        });
         return response;
     } catch (error) {
         return error;
