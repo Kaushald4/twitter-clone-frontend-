@@ -127,7 +127,17 @@ function SignUpModal({
 
                     <div className="mt-[40px] mb-[30px]">
                         <button
-                            onClick={() => setSignUpSteps(signUpSteps + 1)}
+                            onClick={() => {
+                                if (
+                                    signUpDetails.email &&
+                                    signUpDetails.name &&
+                                    dob.day !== "Day" &&
+                                    dob.monthIndex !== "Month" &&
+                                    dob.year !== "Year"
+                                ) {
+                                    setSignUpSteps(signUpSteps + 1);
+                                }
+                            }}
                             className="bg-[#000000] text-white font-[500] w-full py-[10px] rounded-full hover:bg-[#2d2d2d] transition-all duration-500"
                         >
                             Next
