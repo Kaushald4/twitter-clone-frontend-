@@ -6,7 +6,10 @@ if (token) {
     token = token.jwtToken;
 }
 
-const socket: any = io("http://localhost:4000", { autoConnect: false, auth: { token } });
+const socket: any = io("https://twitter-backend.onrender.com", {
+    autoConnect: false,
+    auth: { token },
+});
 
 // socket.onAny((event: any, ...args: any) => {
 //     console.log(event, args);

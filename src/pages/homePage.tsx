@@ -30,7 +30,7 @@ const HomePage = () => {
     useEffect(() => {
         dispatch(fetchAllTweetAction());
         dispatch(getCurrentUserAction());
-        // socket.connect();
+        socket.connect();
     }, []);
 
     const handleTweetInputChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -72,7 +72,11 @@ const HomePage = () => {
     };
 
     const updateTweetLikes = (tweetId: string) => {
-        dispatch(updateTweetLikesAction(tweetId));
+        // dispatch(updateTweetLikesAction(tweetId));
+        socket.emit("tweet_like", tweetId);
+        socket.on("tweet_like", (updatedTweet: any) => {
+            dispatch(updateTweetLikesSuccess(updatedTweet));
+        });
     };
 
     return (
