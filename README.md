@@ -8,9 +8,9 @@
 
 ![Express](https://img.shields.io/badge/@reduxjs/toolkit-gray)
 
-## Twitter Deployed [Live Link](#)
+## Twitter Deployed [Live Link](https://twitterr-clone.netlify.app/)
 
-## Backend Server Code [Link](#)
+## Backend Server Code [Link](https://github.com/Kaushald4/twitter-clone-backend)
 
 ## Technologies used in this project
 
